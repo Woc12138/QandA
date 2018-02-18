@@ -5,6 +5,18 @@ html{
     min-height: 667px;
 }
 
+
+@font-face {
+   font-family: '方正清刻本悦宋简体';
+   src: url('../static/方正清刻本悦宋简.TTF') format('truetype');
+}﻿
+
+@font-face {
+   font-family: '苹方 中等';
+   src: url('../static/PingFang-Medium-1.ttf') format('truetype');
+}﻿
+
+
 a img{
     position: absolute;
     top: 0.315rem;
