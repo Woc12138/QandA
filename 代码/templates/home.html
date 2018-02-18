@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <script src="../static/jquery-3.2.1.min.js"></script>
+    <script src="../static/swiper-3.4.2.jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/homeStyle.css ">
+</head>
+<body>
+<div class="head">
+    <div class="date"></div><div class="year"></div>
+    <div class="slogan">Slogan</div>
+</div>
+
+<div class="middle">
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="#"><img src="https://source.unsplash.com/user/erondu/550x600" /></a><p class="word" id="word1">你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，</p><span>类别</span><img class="more" src="../static/more.png" /></div>
+        <div class="swiper-slide"><a href="#"><img src="https://source.unsplash.com/collection/190727/550x600" /></a><p class="word" id="word2">你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想</p><span>类别</span><img class="more" src="../static/more.png" /></div>
+        <div class="swiper-slide"><a href="#"><img src="https://source.unsplash.com/user/woc12138/likes/550x600" /></a><p class="word" id="word3">你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想</p><span>类别</span><img class="more" src="../static/more.png" /></div>
+        <div class="swiper-slide"><a href="#"><img src="//source.unsplash.com/random/880x960" /></a><p class="word" id="word4">你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想</p><span>类别</span><img class="more" src="../static/more.png" /></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+</div>
+
+</div>
+<div class="nav-bar">
+    <br/>
+    <img class="home" src="../static/home2.png" />
+    <img class="setting" src="../static/setting.png" />
+    <img class="mine" src="../static/mine.png" />
+</div>
+
+
+
+
+
+
+
+<script>
+// 时间函数
+    function date(){
+        var now = new Date();
+        document.getElementsByClassName("date")[0].innerHTML=(now.getMonth()+1)+"月"+now.getDate()+"日";
+        //[0]不能少啊啊
+        document.getElementsByClassName("year")[0].innerHTML=now.getFullYear();
+        setTimeout(date, 1000);
+
+    }
+    date();
+//时间函数
+
+
+//中间swiper部分
+     var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+
+    // 如果需要分页器
+    pagination: '.swiper-pagination',
+
+    effect : 'coverflow',
+    grabCursor : true,
+    slidesPerView: 1.21,
+    centeredSlides: true,
+    coverflowEffect: {
+        rotate: 10,
+        stretch: 10,
+        depth: 400,
+        modifier: 2,
+        slideShadows: true
+    }
+
+    });
+//中间swiper部分
+
+
+//点击navbar中icon变色
+    $(".home").click(function(){
+        if(($(".home").attr("src")[0]='../static/home2.png')||$((".home").attr("src")[0]='../static/home.png')){
+            $(".home").attr('src', '../static/home2.png');
+            $(".setting").attr('src', '../static/setting.png');
+            $(".mine").attr('src', '../static/mine.png');
+        }
+
+    });
+    $(".setting").click(function(){
+        if($(".setting").attr("src")[0]='../static/setting.png'){
+            $(".setting").attr('src', '../static/setting2.png');
+            $(".home").attr('src', '../static/home.png');
+            $(".mine").attr('src', '../static/mine.png');
+        }
+    });
+    $(".mine").click(function(){
+        if($(".mine").attr("src")[0]='../static/mine.png'){
+            $(".mine").attr('src', '../static/mine2.png');
+            $(".setting").attr('src', '../static/setting.png');
+            $(".home").attr('src', '../static/home.png');
+        }
+    });
+
+//点击navbar中icon变色
+
+//jquery的ajax 请求
+$(document).ready(function() {
+    $.get('//lab.sangsir.com/api/sentence.php',
+        function (response) {
+            $("#word1").html(response)
+        }
+)
+});
+
+
+//原生JS的ajax 请求
+   var xhr = new XMLHttpRequest();
+    xhr.open('get', '//lab.sangsir.com/api/sentence.php')
+    xhr.send();
+    xhr.onload = function () {
+      document.getElementById('word2').innerText = xhr.responseText
+    };
+
+
+
+//超过一定字数就省略
+    $(document).ready(function(){
+    var str = $("#word1").text();
+    var l = str.length;
+    if(l>14)
+        arr=str.split("");
+        word = arr.splice(0,31).join("")+"...";
+        $("#word1").html(word);
+
+});
+   $(document).ready(function(){
+    var str = $("#word2").text();
+    var l = str.length;
+    if(l>14)
+        arr=str.split("");
+        word = arr.splice(0,31).join("")+"...";
+        $("#word2").html(word);
+
+});
+   $(document).ready(function(){
+    var str = $("#word3").text();
+    var l = str.length;
+    if(l>14)
+        arr=str.split("");
+        word = arr.splice(0,31).join("")+"...";
+        $("#word3").html(word);
+
+});
+   $(document).ready(function(){
+    var str = $("#word4").text();
+    var l = str.length;
+    if(l>14)
+        arr=str.split("");
+        word = arr.splice(0,31).join("")+"...";
+        $("#word4").html(word);
+
+});
+//超过一定字数就省略
+
+
+
+
+
+</script>
+</body>
+</html>
