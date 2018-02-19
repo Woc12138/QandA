@@ -6,15 +6,24 @@ html{
 }
 
 @font-face {
-   font-family: '方正清刻本悦宋简体';
-   src: url('../static/方正清刻本悦宋简.TTF') format('truetype');
-}﻿
+    font-family: '方正清刻本悦宋简体';
+    src: url('../static/_-webfont.woff2') format('woff2'),
+         url('../static/_-webfont.woff') format('woff'),
+         url('../static/方正清刻本悦宋简.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 @font-face {
-   font-family: '苹方 中等';
-   src: url('../static/PingFang-Medium-1.ttf') format('truetype');
-}﻿
+    font-family: '苹方 中等';
+    src: url('../static/PingFang-Medium-1.woff2') format('woff2'),
+         url('../static/PingFang-Medium-1.woff') format('woff'),
+         url('../static/PingFang-Medium-1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 .head{
     width: 100%;
@@ -59,6 +68,8 @@ html{
 .swiper-container{
     height: 4.39rem;
     width: 100%;
+    position: absolute;
+    top: 1.4rem;
 }
 
 .swiper-slide{
