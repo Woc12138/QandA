@@ -4,67 +4,130 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <script src="../static/jquery-3.2.1.min.js"></script>
-    <script src="../static/swiper-3.4.2.jquery.min.js"></script>
-    <link rel="stylesheet" href="../static/swiper-3.4.2.min.css">
-    <link rel="stylesheet" type="text/css" href="../static/homeStyle.css ">
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/swiper-3.4.2.jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/homeStyle.css ">
+    <link rel="stylesheet" type="text/css" href="../static/css/quesAnsweringStyle.css ">
+    <link rel="stylesheet" type="text/css" href="../static/css/settings.css ">
 </head>
+
 <body>
-<div class="head">
+<!--home-->
+<div class="home-html" style="display: block">
+    <div class="head">
     <div class="date"></div><div class="year"></div>
-    <div class="slogan">Slogan</div>
-</div>
-
-<div class="middle">
-
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href="#"><img src="https://source.unsplash.com/user/erondu/550x600" /></a><p class="word" id="word1">你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，</p><span>类别</span><img class="more" src="../static/more.png" /></div>
-        <div class="swiper-slide"><a href="#"><img src="https://source.unsplash.com/collection/190727/550x600" /></a><p class="word" id="word2">你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想</p><span>类别</span><img class="more" src="../static/more.png" /></div>
-        <div class="swiper-slide"><a href="#"><img src="https://source.unsplash.com/user/woc12138/likes/550x600" /></a><p class="word" id="word3">你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想</p><span>类别</span><img class="more" src="../static/more.png" /></div>
-        <div class="swiper-slide"><a href="#"><img src="//source.unsplash.com/random/880x960" /></a><p class="word" id="word4">你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想，他有梦想你有梦想</p><span>类别</span><img class="more" src="../static/more.png" /></div>
+    <div class="slogan">Question is the key</div>
     </div>
-    <!-- 如果需要分页器 -->
-    <div class="swiper-pagination"></div>
-
+    <div class="middle">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="slide-img" src="#" /><p class="word" ></p><span class="category"></span><img class="more" src="../static/img/more.png" /></div>
+                <div class="swiper-slide"><img class="slide-img" src="#" /><p class="word" ></p><span class="category"></span><img class="more" src="../static/img/more.png" /></div>
+                <div class="swiper-slide"><img class="slide-img" src="#" /><p class="word" ></p><span class="category"></span><img class="more" src="../static/img/more.png" /></div>
+                <div class="swiper-slide"><img class="slide-img" src="#" /><p class="word" ></p><span class="category"></span><img class="more" src="../static/img/more.png" /></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
 </div>
+<!--home-->
 
-</div>
 <div class="nav-bar">
     <br/>
-    <img class="home" src="../static/home2.png" />
-    <img class="setting" src="../static/setting.png" />
-    <img class="mine" src="../static/mine.png" />
+    <img class="home" src="../static/img/home2.png" />
+    <img class="setting" src="../static/img/setting.png" />
+    <img class="mine" src="../static/img/mine.png" />
 </div>
 
+<!--quesAnswering-->
+<div class="quesAnswering-html" style="display: none">
+    <a href="home.html"><img class="back" style="position: absolute;top: 0.25rem;left: 0.2rem;" src="../static/img/back.png" /></a>
+    <div class="gradient"></div>
+    <div class="ques-content">
+        <span class="Q">Q:</span><p class="ques-word"></p>
+    </div>
+    <div class="answer">
+        <textarea class="answer-input" placeholder="请在这里写下你想说的..."></textarea>
+    </div>
+    <input type="button" class="submit" value="提交">
+</div>
+<!--quesAnswering-->
 
+<!--settings-->
+<div class="settings-html" style="display: none">
+    <div class="settings_title">分类</div>
+    <div class="category-img">
+    	<div class="img-1">
+	        <img id="game" class="game" src="../static/img/game.png">
+	        <img id="movie" src="../static/img/movie.png">
+	        <img id="music" src="../static/img/music.png">
+    	</div>
+    	<div class="img-2">
+	        <img id="tech" src="../static/img/tech.png">
+	        <img id="reading" src="../static/img/reading.png">
+	        <img id="recent" src="../static/img/recent.png">
+	    </div>
+    	<div class="img-3">
+	        <img id="comic" src="../static/img/comic.png">
+	        <img id="other" src="../static/img/other.png">
+	    </div>
+    </div>
+</div>
+<!--settings-->
 
+<!--mine-->
+<div class="mine-html" style="display: none">
+    <div class="history">我的历史</div>
+    <div class="mine-show" id="mine-show"></div>
+</div>
+<!--mine-->
 
-
-
-
+<!--secondAnswering-->
+<div class="secondAnswering-html" style="display: none">
+    <img class="second-back" src="../static/img/back.png" />
+    <hr size=0.5>
+    <div class="second-ques-content">
+        <span class="Q">Q:</span>
+        <p class="second-ques"></p>
+        <span class="A">A:</span>
+        <p class="first-answer"></p>
+        <div class="first-answer-date"></div>
+    </div>
+    <div class="second-answer-content">
+        <textarea class="second-answer-input" placeholder="请在这里写下你想说的..."></textarea>
+    </div>
+    <div class="fade" style="display: none">
+        <div class="white-box" style="height: 70%;">
+            <textarea class="second-answer-input" placeholder="请在这里写下你想说的..."></textarea>
+        </div>
+        <input type="button" class="second-submit" value="提交">
+    </div>
+</div>
+<!--secondAnswering-->
 <script>
 // 时间函数
-    function date(){
-        var now = new Date();
-        document.getElementsByClassName("date")[0].innerHTML=(now.getMonth()+1)+"月"+now.getDate()+"日";
-        //[0]不能少啊啊
-        document.getElementsByClassName("year")[0].innerHTML=now.getFullYear();
-        setTimeout(date, 1000);
+function date(){
+    var now = new Date();
+    document.getElementsByClassName("date")[0].innerHTML=(now.getMonth()+1)+"月"+now.getDate()+"日";
+    //[0]不能少啊啊
+    document.getElementsByClassName("year")[0].innerHTML=now.getFullYear();
+}
 
-    }
-    date();
-//时间函数
-
+var myVar = setInterval( date(), 1000);
+function myStopFunction() {
+    clearInterval(myVar);
+}
+if($(".home-html").attr('display')==='none') myStopFunction();
+if($(".home-html").attr('display')==='block') date();
 
 //中间swiper部分
-     var mySwiper = new Swiper ('.swiper-container', {
+var mySwiper = new Swiper ('.swiper-container', {
     direction: 'horizontal',
     loop: true,
-
     // 如果需要分页器
     pagination: '.swiper-pagination',
-
     effect : 'coverflow',
     grabCursor : true,
     slidesPerView: 1.21,
@@ -76,98 +139,534 @@
         modifier: 2,
         slideShadows: true
     }
-
-    });
-//中间swiper部分
-
-
-//点击navbar中icon变色
-    $(".home").click(function(){
-        if(($(".home").attr("src")[0]='../static/home2.png')||$((".home").attr("src")[0]='../static/home.png')){
-            $(".home").attr('src', '../static/home2.png');
-            $(".setting").attr('src', '../static/setting.png');
-            $(".mine").attr('src', '../static/mine.png');
-        }
-
-    });
-    $(".setting").click(function(){
-        if($(".setting").attr("src")[0]='../static/setting.png'){
-            $(".setting").attr('src', '../static/setting2.png');
-            $(".home").attr('src', '../static/home.png');
-            $(".mine").attr('src', '../static/mine.png');
-        }
-    });
-    $(".mine").click(function(){
-        if($(".mine").attr("src")[0]='../static/mine.png'){
-            $(".mine").attr('src', '../static/mine2.png');
-            $(".setting").attr('src', '../static/setting.png');
-            $(".home").attr('src', '../static/home.png');
-        }
-    });
-
-//点击navbar中icon变色
-
-//jquery的ajax 请求
-$(document).ready(function() {
-    $.get('//lab.sangsir.com/api/sentence.php',
-        function (response) {
-            $("#word1").html(response)
-        }
-)
 });
 
+//点击navbar中icon变色
+$(".home").click(function(){
+    $(".home-html").css("display","block");
+    $(".settings-html").css("display","none");
+    $(".mine-html").css("display","none");
+    $(".secondAnswering-html").css("display","none");
+    location.reload();
+    if(($(".home").attr("src")[0]='../static/img/home2.png')||$((".home").attr("src")[0]='../static/img/home.png')){
+        $(".home").attr('src', '../static/img/home2.png');
+        $(".setting").attr('src', '../static/img/setting.png');
+        $(".mine").attr('src', '../static/img/mine.png');
+    }
+});
 
-//原生JS的ajax 请求
-   var xhr = new XMLHttpRequest();
-    xhr.open('get', '//lab.sangsir.com/api/sentence.php')
-    xhr.send();
+$(".setting").click(function(){
+    $(".home-html").css("display","none");
+    $(".settings-html").css("display","block");
+    $(".mine-html").css("display","none");
+    $(".secondAnswering-html").css("display","none");
+    if($(".setting").attr("src")[0]='../static/img/setting.png'){
+        $(".setting").attr('src', '../static/img/setting2.png');
+        $(".home").attr('src', '../static/img/home.png');
+        $(".mine").attr('src', '../static/img/mine.png');
+    }
+});
+
+$(".mine").click(function(){
+    $(".home-html").css("display","none");
+    $(".mine-html").css("display","block");
+    $(".secondAnswering-html").css("display","none");
+    $(".settings-html").css("display","none");
+    if($(".mine").attr("src")[0]='../static/img/mine.png'){
+            $(".mine").attr('src', '../static/img/mine2.png');
+            $(".setting").attr('src', '../static/img/setting.png');
+            $(".home").attr('src', '../static/img/home.png');
+    }
+});
+
+//超过一定字数就省略
+$(document).ready(function(){
+    var n=$(".word").length;
+    for(var i=0;i<n;i++) {
+        var str = $(".word").eq(i).text();
+        var l = str.length;
+        if (l > 31) {
+            var arr = str.split("");
+            var word = arr.splice(0, 31).join("") + "...";
+            $(".word").eq(i).html(word);
+        }
+    }
+});
+
+//首次回答把问题和回答写到我的历史并存储数据到本地
+$(".submit").click(function(){
+    var answer=$(".answer-input").val();
+    var ques=$(".ques-word").text();
+    if(answer.length!=0){//如果输入了字
+
+        //两部分页面的隐藏和显示
+        $(".quesAnswering-html").css("display","none");
+        $(".mine-html").css("display","none");
+        $(".home-html").css("display","block");
+
+        //设置保存的数据
+        var time = new Date();
+        date=time.getFullYear()+"年"+(time.getMonth()+1)+"月"+time.getDate()+"日";
+        localStorage.setItem(ques, JSON.stringify(date+"|"+answer));
+
+        //将问题写入我的历史
+        var show=document.getElementById("mine-show");
+        var list =document.createElement("div");
+        list.setAttribute("class", "lists");
+
+        //我的历史删除历史问题功能
+//        $(".lists").longPress(function(){
+//            alert(213);
+//            if(confirm("确定要删除这个问题吗?")){
+//                alert(this.parentNode);
+//                this.parentNode.removeChild(this);
+//                localStorage.removeItem(ques);
+//            }
+//        });
+
+        //如果问题字数太多将省略
+        var l = ques.length;
+        if(l>17){
+            var z = $(".lists").length;
+            var m=0.29+z*0.45;
+            var arr=ques.split("");
+            var word = arr.splice(0,17).join("")+"...";
+        }
+        else{
+            var word= ques;
+        }
+        list.innerHTML= word;
+        show.insertBefore(list, show.childNodes[-1]);
+        alert("首次回答成功");
+        location.reload() ;
+    }
+    else{                                                   //如果没输入字
+        alert("您没有回答哦~");
+    }
+});
+
+//读取当地存储到我的历史页面
+for (var j = 0, len = localStorage.length; j < len; j++) {
+    var list = document.createElement("div"),
+        show=document.getElementById("mine-show"),
+        key = localStorage.key(j);
+    if(key==='game'||key==='movie'||key==='reading'||key==='recent'||key==='music'||key==='other'||key==='comic'||key==='tech')continue;
+    list.setAttribute("class", "lists");
+    var l = key.length;
+    if(l>17){
+        var arr=key.split("");
+        var word = arr.splice(0,17).join("")+"...";
+    }
+    else{
+        var word = key;
+    }
+    list.innerHTML =  word;
+    show.insertBefore(list, show.childNodes[-1]);
+}
+
+//回答时间的位置随回答字数的变化而变化
+var s=$(".first-answer").text().length;
+if(s>68){
+    var x=2.03+(s/17-4)*0.2+"rem";
+    $(".first-answer-date").css("top",x);
+}
+var d=$(".second-answer").text().length;
+if(d>68){
+    var h=2.03+(s/17-4)*0.2+"rem";
+    $(".second-answer-date").css("top",h);
+}
+
+//点击二次回答页面的返回 回到我的历史页面
+$(".second-back").click(function(){
+    $(".secondAnswering-html").css("display","none");
+    $(".mine-html").css("display","block");
+    $(".nav-bar").css("display","block");
+});
+
+//点击我的历史中的问题 打开 读取本地存储
+$(".lists").click(function(){
+    $(".nav-bar").css("display","none");
+    $(".second-ques-content").fadeIn();
+    var v=0;
+    if(localStorage.game) v++;
+    if(localStorage.reading) v++;
+    if(localStorage.movie) v++;
+    if(localStorage.recent) v++;
+    if(localStorage.music) v++;
+    if(localStorage.tech) v++;
+    if(localStorage.comic) v++;
+    if(localStorage.other) v++;
+    var num=$(this).index()+v;
+    var mineQues = localStorage.key(num);
+    var first_date = JSON.parse(localStorage[mineQues]).split("|")[0],
+        first_answer = JSON.parse(localStorage[mineQues]).split("|")[1];
+    if (JSON.parse(localStorage[mineQues]).split("|")[3]) {
+        $(".secondAnswering-html").css("display", "block");
+        $(".mine-html").css("display", "none");
+        $(".second-ques").html(mineQues);
+        $(".first-answer").html(first_answer);
+        $(".first-answer-date").html(first_date);
+        var second_answer = JSON.parse(localStorage[mineQues]).split("|")[3];
+        var second_date = JSON.parse(localStorage[mineQues]).split("|")[2];
+        $(".second-answer-input").css("display", "none");
+        $(".second-answer-content").css("font-family", "FZQKBYSJ");
+        $(".second-answer-content").css("color", "rgb(42,42,42)");
+        var second_content = '<span class="Q">Q:</span><p class="second-ques">' + mineQues + '</p><span class="A">A:</span><p class="second-answer">' + second_answer + '</p><div class="second-answer-date">' + second_date + '</div>';
+        $(".second-answer-content").html(second_content);
+    }
+    else {
+        $(".second-answer-content").html('<textarea class="second-answer-input" onclick="fade()" placeholder="请在这里写下你想说的..."></textarea>');
+        $(".secondAnswering-html").css("display", "block");
+        $(".mine-html").css("display", "none");
+        $(".second-ques").html(mineQues);
+        $(".first-answer").html(first_answer);
+        $(".first-answer-date").html(first_date);
+    }
+
+});
+
+//首页点击问题的slide-img打开首次回答页面
+$(".slide-img, .word").click(function(){
+    var f=$(this).parent().index();
+    var first_ques=$(".word").eq(f).text();
+    $(".quesAnswering-html").css("display","block");
+    $(".home-html").css("display","none");
+    $(".ques-word").html(first_ques);
+    $(".nav-bar").css("display","none")
+});
+
+//二次回答点击淡入回答白框
+$(".second-answer-input").click(function(){
+    $(".fade").fadeIn();
+});
+function fade(){
+    $(".fade").fadeIn();
+    $(".white-box .second-answer-input").css("display","block");
+}
+
+//二次回答点击淡出回答白框
+$(".second-ques-content").click(function(){
+    $(".fade").fadeOut();
+});
+$(".second-back").click(function(){
+    $(".fade").fadeOut();
+});
+
+//点击提交把二次回答本地存储
+$(".second-submit").click(function(){
+    var second_answer=$(".white-box .second-answer-input").val();
+    var first_answer=$(".first-answer").text();
+    var ques=$(".second-ques").text();
+    if(second_answer.length!=0){
+        for(var g=0;g<=localStorage.length;g++){
+            var second_key = localStorage.key(g);
+            if(second_key===ques){
+                var first_date = JSON.parse(localStorage[second_key]).split("|")[0];
+                var time = new Date();
+                var second_date=time.getFullYear()+"年"+(time.getMonth()+1)+"月"+time.getDate()+"日";
+                localStorage.setItem(ques, JSON.stringify(first_date+"|"+first_answer+"|"+second_date+"|"+second_answer));
+            }
+        }
+        alert("二次回答成功");
+        $(".fade").fadeOut();
+        $(".second-answer-input").css("display","none");
+        var r = $(".second-answer-content");
+        r.css("font-family","方正清刻本悦宋简体");
+        r.css("color","black");
+        var second_content = '<span class="Q">Q:</span><p class="second-ques">'+ques+'</p><span class="A">A:</span><p class="second-answer">'+second_answer+'</p><div class="second-answer-date">'+second_date+'</div>';
+        r.html(second_content);
+    }
+    else{
+        alert("您没有回答哦~")
+        }
+});
+
+//写入我的历史的箭头
+var k=$(".lists").length;
+for(var b=0;b<k;b++){
+    var t=0.29+b*0.45;
+    $(".mine-show").append('<img class="go" src="../static/img/go.png">');
+    $(".go").eq(b).css("top",t+'rem');
+}
+
+//首页交互
+if(localStorage.game||localStorage.reading||localStorage.movie||localStorage.recent||localStorage.tech||localStorage.other||localStorage.music||localStorage.comic){
+    var p=[];
+    if(localStorage.game) p.push("游戏");
+    if(localStorage.reading) p.push("阅读");
+    if(localStorage.movie) p.push("电影");
+    if(localStorage.recent) p.push("时事");
+    if(localStorage.music) p.push("音乐");
+    if(localStorage.tech) p.push("科技");
+    if(localStorage.comic) p.push("动漫");
+    if(localStorage.other) p.push("其他");
+    var xhr = new XMLHttpRequest();
+    xhr.open('post', 'http://144.202.7.201:3000/api/question');
+    var data=JSON.stringify({"category": p});
+    xhr.send(data);
     xhr.onload = function () {
-      document.getElementById('word2').innerText = xhr.responseText
+        var word = document.getElementsByClassName('word');
+        var category = document.getElementsByClassName('category');
+        var image = document.getElementsByClassName('slide-img');
+        var ques1=JSON.parse(xhr.responseText).ques1;
+        var ques2=JSON.parse(xhr.responseText).ques2;
+        var ques3=JSON.parse(xhr.responseText).ques3;
+        var ques4=JSON.parse(xhr.responseText).ques4;
+        word[1].innerText= ques1.description;
+        category[1].innerText= ques1.category;
+        image[1].src= ques1.image;
+
+        word[2].innerText= ques2.description;
+        category[2].innerText= ques2.category;
+        image[2].src= ques2.image;
+
+        word[3].innerText= ques3.description;
+        category[3].innerText= ques3.category;
+        image[3].src= ques3.image;
+
+        word[4].innerText= ques4.description;
+        category[4].innerText= ques4.category;
+        image[4].src= ques4.image;
+    }
+}
+else{
+    var xhr = new XMLHttpRequest();
+    xhr.open('post', 'http://144.202.7.201:3000/api/question');
+    var data=JSON.stringify({"category": []});
+    xhr.send(data);
+    xhr.onload = function () {
+        var word = document.getElementsByClassName('word');
+        var category = document.getElementsByClassName('category');
+        var image = document.getElementsByClassName('slide-img');
+        var ques1=JSON.parse(xhr.responseText).ques1;
+        var ques2=JSON.parse(xhr.responseText).ques2;
+        var ques3=JSON.parse(xhr.responseText).ques3;
+        var ques4=JSON.parse(xhr.responseText).ques4;
+        word[1].innerText= ques1.description;
+        category[1].innerText= ques1.category;
+        image[1].src= ques1.image;
+
+        word[2].innerText= ques2.description;
+        category[2].innerText= ques2.category;
+        image[2].src= ques2.image;
+
+        word[3].innerText= ques3.description;
+        category[3].innerText= ques3.category;
+        image[3].src= ques3.image;
+
+        word[4].innerText= ques4.description;
+        category[4].innerText= ques4.category;
+        image[4].src= ques4.image;
     };
+}
 
+//点击刷新
+$(".more").click(function(){
+    if (localStorage.game || localStorage.reading || localStorage.movie || localStorage.recent || localStorage.tech || localStorage.other || localStorage.music || localStorage.comic) {
+        var p = [];
+        if (localStorage.game) p.push("游戏");
+        if (localStorage.reading) p.push("阅读");
+        if (localStorage.movie) p.push("电影");
+        if (localStorage.recent) p.push("时事");
+        if (localStorage.music) p.push("音乐");
+        if (localStorage.tech) p.push("科技");
+        if (localStorage.comic) p.push("动漫");
+        if (localStorage.other) p.push("其他");
+        var xhr = new XMLHttpRequest();
+        xhr.open('post', 'http://144.202.7.201:3000/api/question');
+        var data = JSON.stringify({"category": p});
+        xhr.send(data);
+        xhr.onload = function () {
+            var word = document.getElementsByClassName('word');
+            var category = document.getElementsByClassName('category');
+            var image = document.getElementsByClassName('slide-img');
+            var ques1 = JSON.parse(xhr.responseText).ques1;
+            var ques2 = JSON.parse(xhr.responseText).ques2;
+            var ques3 = JSON.parse(xhr.responseText).ques3;
+            var ques4 = JSON.parse(xhr.responseText).ques4;
+            word[1].innerText = ques1.description;
+            category[1].innerText = ques1.category;
+            image[1].src = ques1.image;
 
+            word[2].innerText = ques2.description;
+            category[2].innerText = ques2.category;
+            image[2].src = ques2.image;
 
-//超过一定字数就省略
-    $(document).ready(function(){
-    var str = $("#word1").text();
-    var l = str.length;
-    if(l>14)
-        arr=str.split("");
-        word = arr.splice(0,31).join("")+"...";
-        $("#word1").html(word);
+            word[3].innerText = ques3.description;
+            category[3].innerText = ques3.category;
+            image[3].src = ques3.image;
 
+            word[4].innerText = ques4.description;
+            category[4].innerText = ques4.category;
+            image[4].src = ques4.image;
+        }
+    }
+    else {
+        var xhr = new XMLHttpRequest();
+        xhr.open('post', 'http://144.202.7.201:3000/api/question');
+        var data = JSON.stringify({"category": []});
+        xhr.send(data);
+        xhr.onload = function () {
+            var word = document.getElementsByClassName('word');
+            var category = document.getElementsByClassName('category');
+            var image = document.getElementsByClassName('slide-img');
+            var ques1 = JSON.parse(xhr.responseText).ques1;
+            var ques2 = JSON.parse(xhr.responseText).ques2;
+            var ques3 = JSON.parse(xhr.responseText).ques3;
+            var ques4 = JSON.parse(xhr.responseText).ques4;
+            word[1].innerText = ques1.description;
+            category[1].innerText = ques1.category;
+            image[1].src = ques1.image;
+
+            word[2].innerText = ques2.description;
+            category[2].innerText = ques2.category;
+            image[2].src = ques2.image;
+
+            word[3].innerText = ques3.description;
+            category[3].innerText = ques3.category;
+            image[3].src = ques3.image;
+
+            word[4].innerText = ques4.description;
+            category[4].innerText = ques4.category;
+            image[4].src = ques4.image;
+        }
+    }
 });
-   $(document).ready(function(){
-    var str = $("#word2").text();
-    var l = str.length;
-    if(l>14)
-        arr=str.split("");
-        word = arr.splice(0,31).join("")+"...";
-        $("#word2").html(word);
 
+//分类 选择
+$("#game").click(function(){
+    if($("#game").attr('src')==="../static/img/game.png"){       //选中
+        $("#game").attr("src","../static/img/game2.png");
+        localStorage.setItem("game","游戏");
+    }
+    else{                                                    //取消选中
+        localStorage.removeItem("game");
+        $(".game").attr("src","../static/img/game.png");
+    }
 });
-   $(document).ready(function(){
-    var str = $("#word3").text();
-    var l = str.length;
-    if(l>14)
-        arr=str.split("");
-        word = arr.splice(0,31).join("")+"...";
-        $("#word3").html(word);
 
+$("#movie").click(function(){
+    if($("#movie").attr('src')==="../static/img/movie.png"){
+        $("#movie").attr("src","../static/img/movie2.png");
+        localStorage.setItem("movie","电影");
+    }
+    else{
+        $("#movie").attr("src","../static/img/movie.png");
+        localStorage.removeItem("movie");
+    }
 });
-   $(document).ready(function(){
-    var str = $("#word4").text();
-    var l = str.length;
-    if(l>14)
-        arr=str.split("");
-        word = arr.splice(0,31).join("")+"...";
-        $("#word4").html(word);
 
+$("#music").click(function(){
+    if($("#music").attr('src')==="../static/img/music.png"){
+        $("#music").attr("src","../static/img/music2.png");
+        localStorage.setItem("music","音乐");
+    }
+    else{
+        $("#music").attr("src","../static/img/music.png");
+        localStorage.removeItem("music");
+    }
 });
-//超过一定字数就省略
 
+$("#tech").click(function(){
+    if($("#tech").attr('src')==="../static/img/tech.png"){
+        $("#tech").attr("src","../static/img/tech2.png");
+        localStorage.setItem("tech","科技");
+    }
+    else{
+        $("#tech").attr("src","../static/img/tech.png");
+        localStorage.removeItem("tech");
+    }
+});
 
+$("#reading").click(function(){
+    if($("#reading").attr('src')==="../static/img/reading.png"){
+        $("#reading").attr("src","../static/img/reading2.png");
+        localStorage.setItem("reading","阅读");
+    }
+    else{
+        $("#reading").attr("src","../static/img/reading.png");
+        localStorage.removeItem("reading");
+    }
+});
 
+$("#recent").click(function(){
+    if($("#recent").attr('src')==="../static/img/recent.png"){
+        $("#recent").attr("src","../static/img/recent2.png");
+        localStorage.setItem("recent","时事");
+    }
+    else{
+        $("#recent").attr("src","../static/img/recent.png");
+        localStorage.removeItem("recent");
+    }
+});
+
+$("#comic").click(function(){
+    if($("#comic").attr('src')==="../static/img/comic.png"){
+        $("#comic").attr("src","../static/img/comic2.png");
+        localStorage.setItem("comic","动漫");
+    }
+    else{
+        $("#comic").attr("src","../static/img/comic.png");
+        localStorage.removeItem("comic");
+    }
+});
+
+$("#other").click(function(){
+    if($("#other").attr('src')==="../static/img/other.png"){
+        $("#other").attr("src","../static/img/other2.png");
+        localStorage.setItem("other","其他");
+    }
+    else{
+        $("#other").attr("src","../static/img/other.png");
+        localStorage.removeItem("other");
+    }
+});
+
+//分类页面打开 加载
+if(localStorage.game){$("#game").attr("src","../static/img/game2.png");}
+if(localStorage.movie){$("#movie").attr("src","../static/img/movie2.png");}
+if(localStorage.music){$("#music").attr("src","../static/img/music2.png");}
+if(localStorage.tech){$("#tech").attr("src","../static/img/tech2.png");}
+if(localStorage.reading){$("#reading").attr("src","../static/img/reading2.png");}
+if(localStorage.recent){$("#recent").attr("src","../static/img/recent2.png");}
+if(localStorage.comic){$("#comic").attr("src","../static/img/comic2.png");}
+if(localStorage.other){$("#other").attr("src","../static/img/other2.png");}
+
+//我的历史页面 长按删除问题功能
+$.fn.longPress = function(fn) {
+    var timeout = undefined;
+    var $this = this;
+    for(var i = 0;i<$this.length;i++){
+        $this[i].addEventListener('touchstart', function(event) {
+            timeout = setTimeout(fn, 800);  //长按时间超过800ms，则执行传入的方法
+        }, false);
+        $this[i].addEventListener('touchend', function(event) {
+            clearTimeout(timeout);  //长按时间少于800ms，不会执行传入的方法
+        }, false);
+    }
+};
+
+var j=0;
+if(localStorage.game) j++;
+if(localStorage.reading) j++;
+if(localStorage.movie) j++;
+if(localStorage.recent) j++;
+if(localStorage.music) j++;
+if(localStorage.tech) j++;
+if(localStorage.comic) j++;
+if(localStorage.other) j++;
+$(".lists").each (function(i) {
+    $(this).longPress((function (k) {
+        return function () {
+            var key = localStorage.key(j+k);
+            if (confirm("确定要删除这个问题吗?")) {
+                $(".lists").eq(k).remove();
+                $(".go").eq(-1).remove();
+                localStorage.removeItem(key);
+            }
+        }
+    })(i));
+});
 
 
 </script>
